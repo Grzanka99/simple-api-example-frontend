@@ -4,20 +4,19 @@ import "./App.scss";
 import AddEventForm from "./components/AddEventForm/AddEventForm";
 import List from "./components/List/List";
 import { EventInterface } from "./interfaces/event.interface";
+import CONFIG from "../config.json";
 
-const API = "http://localhost:3001/events";
+const API = CONFIG.api;
 
 export default class App extends React.Component {
 	constructor(props: any) {
 		super(props);
 		this.state = {
-			name: "Obi-wan",
 			events: [],
 		};
 	}
 
 	declare state: {
-		name: string;
 		events: EventInterface[];
 	};
 
@@ -26,17 +25,17 @@ export default class App extends React.Component {
 	}
 
 	async getEvents() {
-		const temp = await axios.get(API);
+		const temp = await axios.get(`${API}/events`);
 		this.setState({ events: temp.data });
 	}
 
 	async removeEvent(id: number) {
-		const removed = await axios.delete(`${API}/${id}`);
+		const removed = await axios.delete(`${API}/events/${id}`);
 		await this.getEvents();
 	}
 
 	async createEvent(values: any) {
-		const created = await axios.post(API, values);
+		const created = await axios.post(`${API}/events`, values);
 		this.getEvents();
 	}
 

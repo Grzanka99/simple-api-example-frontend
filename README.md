@@ -8,6 +8,14 @@ First, install all node modules
 $ pnpm install
 ```
 
+Then, set API url in config.json file:
+
+```json
+{
+	"api": "http://localhost:3001"
+}
+```
+
 To run in dev mode
 
 ```bash
