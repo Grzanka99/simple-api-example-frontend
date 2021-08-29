@@ -12,7 +12,7 @@ Then, set API url in config.json file:
 
 ```json
 {
-	"api": "http://localhost:3001"
+  "api": "http://localhost:3001"
 }
 ```
 
