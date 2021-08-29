@@ -1,0 +1,28 @@
+.Button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+
+  width: 37px;
+  height: 37px;
+
+  transition: 100ms ease-in-out;
+
+  &:hover {
+    background-color: rgba(#bf616a, 0.15);
+    box-shadow: 4px 4px 5px rgba(black, 0.05);
+  }
+
+  &:active {
+    background-color: rgba(#bf616a, 0.2);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding: 15%;
+  }
+}

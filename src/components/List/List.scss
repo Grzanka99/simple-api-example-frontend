@@ -1,0 +1,49 @@
+.List {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+
+  &__li {
+    display: grid;
+    padding: 5px 15px;
+    grid-template-columns: repeat(2, 15%) 1fr 150px 50px;
+    grid-gap: 15px;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 50px;
+    width: 100%;
+    background-color: #d8dee9;
+    border-radius: 5px;
+
+    margin: 0;
+    margin-bottom: 5px;
+
+    transition: 100ms ease-in-out;
+
+    &--hover {
+      &:hover {
+        background-color: #e5e9f0;
+      }
+    }
+
+    span {
+      height: 100%;
+      width: 100%;
+
+      display: inline-flex;
+      align-items: center;
+
+      border-right: 1px solid rgba(#4c566a, 0.5);
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+}
